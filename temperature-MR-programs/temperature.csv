@@ -1,0 +1,13 @@
+station_id,date,temperature
+station_1,2024-01-01,-5.2
+station_1,2024-01-02,0.5
+station_1,2024-01-03,-3.4
+station_2,2024-01-01,3.5
+station_2,2024-01-02,2.8
+station_2,2024-01-03,4.1
+station_3,2024-01-01,-10.0
+station_3,2024-01-02,-8.5
+station_3,2024-01-03,-9.2
+station_4,2024-01-01,15.3
+station_4,2024-01-02,14.8
+station_4,2024-01-03,15.1

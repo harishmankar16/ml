@@ -1,0 +1,18 @@
+movies = LOAD 'movies.csv' USING PigStorage(',') as (Movie_id:INT,M_title:CHARARRAY,Release_Year:INT,Votes:INT,score:INT)
+DUMP movies
+
+movies_with_more_than_100_votes = FILTER movies by Votes > 100
+movies_title_with_more_than_100_votes = FOREACH movies_with_more_than_100_votes GENERATE M_title;
+DUMP movies_title_with_more_than_100_votes;
+
+movies_year_2020 = FILTER movies by Release_Year == 2020
+movies_title_votes_2020 = FOREACH movies_year_2020 GENERATE M_title,Votes;
+DUMP movies_title_votes_2020;
+
+movie_bhoot = FILTER movies BY M_title == 'Bhoot';
+votes_and_score_bhoot = FOREACH movie_bhoot GENERATE Votes, score;
+DUMP votes_and_score_bhoot;
+
+grouped_by_votes = GROUP movies BY Votes;
+DUMP grouped_by_votes;
+
